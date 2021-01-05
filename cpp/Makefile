@@ -1,9 +1,9 @@
 CXX = g++
 CXXFLAGS = -std=c++11 -Wall -I . -c 
 CLLFLAGS = -std=c++11 -Wall -I . -O3 -fPIC -shared
-LXXFLAGS = -std=c++11 -I . -pthread -ltbb
+LXXFLAGS = -std=c++11 -lboard
 OBJECTS = board.o  main.o
-LIBS = libboard.so
+LIBS = ../libboard.so
 TARGET = main
 
 $(TARGET): $(OBJECTS) $(LIBS)
@@ -13,8 +13,8 @@ $(TARGET): $(OBJECTS) $(LIBS)
 main.o: main.cpp
 	$(CXX) $(CXXFLAGS) ./main.cpp -o ./main.o
 
-libboard.so:board.cpp
-	$(CXX) $(CLLFLAGS) board.cpp -o libboard.so
+../libboard.so:board.cpp
+	$(CXX) $(CLLFLAGS) board.cpp -o ../libboard.so
 
 
 
