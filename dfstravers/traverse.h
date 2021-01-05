@@ -9,6 +9,7 @@ std::vector<Board> BFSTraverse(Board start , Board goal ,int numberOfLevel);
 class DFSTraverseClass{
 public:
     DFSTraverseClass();
+    ~DFSTraverseClass()=default;
     std::vector<Board> DFSTraverse(Board  start , Board   goal  ,int numberOflevels, int level = 0  ,Direction formerDirection=Direction::NOTHING );
 private:
     std::vector<Board> solution;
@@ -26,6 +27,7 @@ class Node{
         Board table;
         Node(Board table , Direction);
         Node()=default;
+        ~Node()=default;
         void disp();
 
     

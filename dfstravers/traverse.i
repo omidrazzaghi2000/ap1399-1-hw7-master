@@ -1,9 +1,15 @@
-/* File : example.i */
 %module traverse
-
 %{
 #include "traverse.h"
+#include "board.h"
 %}
 
-/* Let's just grab the original header file here */
+%include "std_vector.i"
+
+// Instantiate templates used by example
+namespace std {
+   %template(IntVector) vector<Board>;
+}
+
+// Include the header file with above prototypes
 %include "traverse.h"

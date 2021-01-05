@@ -10,6 +10,7 @@ class MainWindow(QMainWindow,Form):
     def __init__(self):
         super(MainWindow,self).__init__()
         self.setupUi(self)
+        
 
 
 
