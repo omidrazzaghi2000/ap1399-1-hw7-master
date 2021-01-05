@@ -90,6 +90,296 @@ except AttributeError:
     _newclass = 0
 
 
+class SwigPyIterator(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, SwigPyIterator, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, SwigPyIterator, name)
+
+    def __init__(self, *args, **kwargs):
+        raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    __swig_destroy__ = _board.delete_SwigPyIterator
+    __del__ = lambda self: None
+
+    def value(self):
+        return _board.SwigPyIterator_value(self)
+
+    def incr(self, n=1):
+        return _board.SwigPyIterator_incr(self, n)
+
+    def decr(self, n=1):
+        return _board.SwigPyIterator_decr(self, n)
+
+    def distance(self, x):
+        return _board.SwigPyIterator_distance(self, x)
+
+    def equal(self, x):
+        return _board.SwigPyIterator_equal(self, x)
+
+    def copy(self):
+        return _board.SwigPyIterator_copy(self)
+
+    def next(self):
+        return _board.SwigPyIterator_next(self)
+
+    def __next__(self):
+        return _board.SwigPyIterator___next__(self)
+
+    def previous(self):
+        return _board.SwigPyIterator_previous(self)
+
+    def advance(self, n):
+        return _board.SwigPyIterator_advance(self, n)
+
+    def __eq__(self, x):
+        return _board.SwigPyIterator___eq__(self, x)
+
+    def __ne__(self, x):
+        return _board.SwigPyIterator___ne__(self, x)
+
+    def __iadd__(self, n):
+        return _board.SwigPyIterator___iadd__(self, n)
+
+    def __isub__(self, n):
+        return _board.SwigPyIterator___isub__(self, n)
+
+    def __add__(self, n):
+        return _board.SwigPyIterator___add__(self, n)
+
+    def __sub__(self, *args):
+        return _board.SwigPyIterator___sub__(self, *args)
+    def __iter__(self):
+        return self
+SwigPyIterator_swigregister = _board.SwigPyIterator_swigregister
+SwigPyIterator_swigregister(SwigPyIterator)
+
+class IntVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IntVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, IntVector, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _board.IntVector_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _board.IntVector___nonzero__(self)
+
+    def __bool__(self):
+        return _board.IntVector___bool__(self)
+
+    def __len__(self):
+        return _board.IntVector___len__(self)
+
+    def __getslice__(self, i, j):
+        return _board.IntVector___getslice__(self, i, j)
+
+    def __setslice__(self, *args):
+        return _board.IntVector___setslice__(self, *args)
+
+    def __delslice__(self, i, j):
+        return _board.IntVector___delslice__(self, i, j)
+
+    def __delitem__(self, *args):
+        return _board.IntVector___delitem__(self, *args)
+
+    def __getitem__(self, *args):
+        return _board.IntVector___getitem__(self, *args)
+
+    def __setitem__(self, *args):
+        return _board.IntVector___setitem__(self, *args)
+
+    def pop(self):
+        return _board.IntVector_pop(self)
+
+    def append(self, x):
+        return _board.IntVector_append(self, x)
+
+    def empty(self):
+        return _board.IntVector_empty(self)
+
+    def size(self):
+        return _board.IntVector_size(self)
+
+    def swap(self, v):
+        return _board.IntVector_swap(self, v)
+
+    def begin(self):
+        return _board.IntVector_begin(self)
+
+    def end(self):
+        return _board.IntVector_end(self)
+
+    def rbegin(self):
+        return _board.IntVector_rbegin(self)
+
+    def rend(self):
+        return _board.IntVector_rend(self)
+
+    def clear(self):
+        return _board.IntVector_clear(self)
+
+    def get_allocator(self):
+        return _board.IntVector_get_allocator(self)
+
+    def pop_back(self):
+        return _board.IntVector_pop_back(self)
+
+    def erase(self, *args):
+        return _board.IntVector_erase(self, *args)
+
+    def __init__(self, *args):
+        this = _board.new_IntVector(*args)
+        try:
+            self.this.append(this)
+        except Exception:
+            self.this = this
+
+    def push_back(self, x):
+        return _board.IntVector_push_back(self, x)
+
+    def front(self):
+        return _board.IntVector_front(self)
+
+    def back(self):
+        return _board.IntVector_back(self)
+
+    def assign(self, n, x):
+        return _board.IntVector_assign(self, n, x)
+
+    def resize(self, *args):
+        return _board.IntVector_resize(self, *args)
+
+    def insert(self, *args):
+        return _board.IntVector_insert(self, *args)
+
+    def reserve(self, n):
+        return _board.IntVector_reserve(self, n)
+
+    def capacity(self):
+        return _board.IntVector_capacity(self)
+    __swig_destroy__ = _board.delete_IntVector
+    __del__ = lambda self: None
+IntVector_swigregister = _board.IntVector_swigregister
+IntVector_swigregister(IntVector)
+
+class VectorOfVectorofInt(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, VectorOfVectorofInt, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, VectorOfVectorofInt, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _board.VectorOfVectorofInt_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _board.VectorOfVectorofInt___nonzero__(self)
+
+    def __bool__(self):
+        return _board.VectorOfVectorofInt___bool__(self)
+
+    def __len__(self):
+        return _board.VectorOfVectorofInt___len__(self)
+
+    def __getslice__(self, i, j):
+        return _board.VectorOfVectorofInt___getslice__(self, i, j)
+
+    def __setslice__(self, *args):
+        return _board.VectorOfVectorofInt___setslice__(self, *args)
+
+    def __delslice__(self, i, j):
+        return _board.VectorOfVectorofInt___delslice__(self, i, j)
+
+    def __delitem__(self, *args):
+        return _board.VectorOfVectorofInt___delitem__(self, *args)
+
+    def __getitem__(self, *args):
+        return _board.VectorOfVectorofInt___getitem__(self, *args)
+
+    def __setitem__(self, *args):
+        return _board.VectorOfVectorofInt___setitem__(self, *args)
+
+    def pop(self):
+        return _board.VectorOfVectorofInt_pop(self)
+
+    def append(self, x):
+        return _board.VectorOfVectorofInt_append(self, x)
+
+    def empty(self):
+        return _board.VectorOfVectorofInt_empty(self)
+
+    def size(self):
+        return _board.VectorOfVectorofInt_size(self)
+
+    def swap(self, v):
+        return _board.VectorOfVectorofInt_swap(self, v)
+
+    def begin(self):
+        return _board.VectorOfVectorofInt_begin(self)
+
+    def end(self):
+        return _board.VectorOfVectorofInt_end(self)
+
+    def rbegin(self):
+        return _board.VectorOfVectorofInt_rbegin(self)
+
+    def rend(self):
+        return _board.VectorOfVectorofInt_rend(self)
+
+    def clear(self):
+        return _board.VectorOfVectorofInt_clear(self)
+
+    def get_allocator(self):
+        return _board.VectorOfVectorofInt_get_allocator(self)
+
+    def pop_back(self):
+        return _board.VectorOfVectorofInt_pop_back(self)
+
+    def erase(self, *args):
+        return _board.VectorOfVectorofInt_erase(self, *args)
+
+    def __init__(self, *args):
+        this = _board.new_VectorOfVectorofInt(*args)
+        try:
+            self.this.append(this)
+        except Exception:
+            self.this = this
+
+    def push_back(self, x):
+        return _board.VectorOfVectorofInt_push_back(self, x)
+
+    def front(self):
+        return _board.VectorOfVectorofInt_front(self)
+
+    def back(self):
+        return _board.VectorOfVectorofInt_back(self)
+
+    def assign(self, n, x):
+        return _board.VectorOfVectorofInt_assign(self, n, x)
+
+    def resize(self, *args):
+        return _board.VectorOfVectorofInt_resize(self, *args)
+
+    def insert(self, *args):
+        return _board.VectorOfVectorofInt_insert(self, *args)
+
+    def reserve(self, n):
+        return _board.VectorOfVectorofInt_reserve(self, n)
+
+    def capacity(self):
+        return _board.VectorOfVectorofInt_capacity(self)
+    __swig_destroy__ = _board.delete_VectorOfVectorofInt
+    __del__ = lambda self: None
+VectorOfVectorofInt_swigregister = _board.VectorOfVectorofInt_swigregister
+VectorOfVectorofInt_swigregister(VectorOfVectorofInt)
+
 
 _board.UP_swigconstant(_board)
 UP = _board.UP
