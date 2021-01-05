@@ -6422,7 +6422,7 @@
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>previous.png</normaloff>previous.png</iconset>
+            <normaloff>C:/Users/hplp/.designer/backup/previous.png</normaloff>C:/Users/hplp/.designer/backup/previous.png</iconset>
           </property>
          </widget>
         </item>
@@ -6644,7 +6644,7 @@
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>next.png</normaloff>next.png</iconset>
+            <normaloff>C:/Users/hplp/.designer/backup/next.png</normaloff>C:/Users/hplp/.designer/backup/next.png</iconset>
           </property>
           <property name="default">
            <bool>false</bool>
