@@ -1,16 +1,24 @@
 import sys
 import os
-# from main_window import MainWindow
-# from PyQt5.QtWidgets import QApplication
+from main_window import MainWindow
+from PyQt5.QtGui import QImage,QPalette
+from PyQt5.QtWidgets import QApplication
 import ctypes
+import board
+import traverse
 
+# a=board.Board(False)
+# b=board.Board(False)
+# t=traverse.DFSTraverseClass()
+# c=traverse.DFSTraverseClass.DFSTraverse(t,a,b,10)
 
+app = QApplication(sys.argv)
+w=MainWindow()
 
-if __name__ == "__main__":
-    # app = QApplication(sys.argv)
-    # w=MainWindow()
-    # w.show()
-    # sys.exit(app.exec_())
-    lib_path=os.path.join(os.getcwd(),'libboard.so')
-    lib = ctypes.cdll.LoadLibrary(lib_path)
-    print(lib)
+w.show()
+sys.exit(app.exec_())
+
+    
+    
+
+    
