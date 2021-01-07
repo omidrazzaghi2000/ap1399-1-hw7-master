@@ -4,6 +4,7 @@ from PyQt5 import uic
 from PyQt5.QtCore import QPropertyAnimation,QRect,Qt
 from PyQt5.QtWidgets import QMainWindow,QGridLayout,QLabel,QPushButton,QDialog
 import board
+import traverse
 import math
 Form = uic.loadUiType(os.path.join(os.getcwd(),"main_window.ui"))[0]
 
@@ -55,7 +56,7 @@ class MainWindow(QMainWindow,Form):
                     s+=str(j)
             return s
         self.lineEdit_Start.setText(stringBoard(self.random_board))
-        self.lineEdit_Level.setInputMask("99")
+        self.lineEdit_Level.setInputMask("90")
         
         
     def move(self):
@@ -83,12 +84,37 @@ class MainWindow(QMainWindow,Form):
             self.lineEdit_Start.hasAcceptableInput() and
             self.lineEdit_Level.hasAcceptableInput()):
             #correct input user
-            print("ok")
+            
+            def stringToTuple(string):
+                a=[]
+                string=list(string)
+                for i in string:
+                    if i != ' ':
+                        a.append(int(i))
+                return tuple(a)
+            
+            start = board.Board(stringToTuple(self.lineEdit_Start.text()))
+            goal = board.Board(stringToTuple(self.lineEdit_Goal.text()))
+            # print(start)
+            # print(goal)
+            self.progressBar.setFormat("%v")
+            if(self.comboBox_Method.currentIndex()==0):
+                #dfsTraverse :
+                dfs=traverse.DFSTraverseClass()
+                self.sol=traverse.DFSTraverseClass.DFSTraverse(dfs,start,goal,(int)(self.lineEdit_Level.text()))
+            elif(self.comboBox_Method.currentIndex()==1):
+                #bfsTraverse :
+                self.sol=traverse.BFSTraverse(start,goal,(int)(self.lineEdit_Level.text()))
+            self.progressBar.setMaximum(self.sol.__len__())
+            
+
+            
+
+
+
+
         else:
-            
             d = QDialog(self)
-            
-            
             d.setFixedSize(300,100)
             b1 = QPushButton("ok",d)
             b1.move(math.floor(d.width()/2)-math.floor(b1.width()/3),math.floor(d.height()/2))
